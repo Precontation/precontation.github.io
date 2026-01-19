@@ -17,7 +17,7 @@ export default function GamesClient() {
           Games
         </h1>
         <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
-          Wow what a cool website
+          Some (very unfinished) games by yours truly!
         </h2>
         <div className=" grid grid-cols-3 gap-10">
           <Link href="/games?g=br2">

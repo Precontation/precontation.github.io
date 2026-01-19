@@ -17,7 +17,9 @@ export default function SwitcherLink({
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}
     >
-      <Link href={`/${to}`}>{name}</Link>
+      <Link href={`/${to}`} className="font-semifancy">
+        {name}
+      </Link>
       {isMouseOver && <span className="bg-secondary min-w-1 min-h-0.5"></span>}
     </nav>
   );

@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #3322a5;
-  --secondary: #c7950e;
+  --primary: rgb(64, 43, 202);
+  --secondary: #f76565;
 }
 
 @theme inline {
@@ -14,6 +14,10 @@
   --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-fancy: "Times New Roman", Times, serif;
+
+  --font-semifancy: Georgia, "Times New Roman", Times, serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +30,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
 }
 
 button {
@@ -60,5 +66,21 @@ button:active {
     transform: translateY(50px) rotate(20deg);
     filter: sepia(50%);
     opacity: 0;
+  }
+}
+
+.splash-text {
+  animation: splashPulse 0.5s linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes splashPulse {
+  0% {
+    transform: translateX(150) translateY(-25) scale(100%) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(150) translateY(-25) scale(110%) rotate(-10deg);
   }
 }

@@ -66,10 +66,10 @@ export default function Home() {
   );
   return (
     <div className="flex flex-col items-center gap-5">
-      <h1 className="justify-center text-7xl w-fit text-primary overflow-hidden">
+      <h1 className="justify-center text-7xl w-fit text-primary overflow-hidden font-fancy">
         Precontation
       </h1>
-      <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
+      <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden splash-text font-semifancy">
         Wow what a cool website
       </h2>
       <br />
