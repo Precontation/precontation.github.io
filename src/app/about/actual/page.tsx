@@ -6,9 +6,10 @@ import Link from "next/link";
 export default function ActualAbout() {
   return (
     <div className="flex flex-col items-center gap-5">
-      <h1 className="text-5xl text-primary overflow-hidden">
-        About me (for real this time)
-      </h1>
+      <h1 className="text-5xl text-primary overflow-hidden">About me</h1>
+      <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
+        (for real this time)
+      </h2>
       <ul>
         <li>i am probably a human person</li>
         <li>I like coding</li>
