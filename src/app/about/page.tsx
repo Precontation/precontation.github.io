@@ -9,14 +9,14 @@ export default function About() {
       <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
         i am probably a human person
       </h2>
-      <div className="flex flex-row items-center gap-5">
-        <Link href={"/"}>
+      <nav className="flex flex-row items-center gap-5">
+        <Link draggable={false} tabIndex={-1} href={"/"}>
           <button className="rounded-full bg-primary p-2">Back</button>
         </Link>
-        <Link href={"/about/actual"}>
+        <Link draggable={false} tabIndex={-1} href={"/about/actual"}>
           <button className="rounded-full bg-primary p-2">No but really</button>
         </Link>
-      </div>
+      </nav>
       <div className="flex flex-col items-center">
         <em>{"I\'m not that special"}</em>
         <em>-me, 2026</em>

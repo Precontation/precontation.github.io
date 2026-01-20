@@ -66,8 +66,6 @@ const dialogueArray: Array<string> = [
 
 export default function Home() {
   function removeMyGithubYeaaaaaaa() {
-    if (!githubButtonRef.current) return;
-
     if (removedGithub) {
       if (dialogueArray.indexOf(currentDialogue) == dialogueArray.length - 1) {
         open("https://store.steampowered.com/app/2159370/Click_For_Points/");
@@ -80,11 +78,10 @@ export default function Home() {
       return;
     }
 
-    setIsRemovingGithub(true);
+    setRemovedGithub(true);
   }
 
   const githubButtonRef = useRef<HTMLButtonElement>(null);
-  const [isRemovingGithub, setIsRemovingGithub] = useState<boolean>(false);
   const [removedGithub, setRemovedGithub] = useState<boolean>(false);
 
   const [currentSplash, setCurrentSplash] = useState<string>("‎ "); // Invisible character because idk man i hate next.js
@@ -111,17 +108,31 @@ export default function Home() {
       </h2>
       <br />
       <div className="flex items-center gap-5 w-[50vw]">
-        <button
-          onAnimationEnd={() => {
-            setRemovedGithub(true);
-            setCurrentDialogue(dialogueArray[1]); // Call this here just for next dialogue
-          }}
-          className={`rounded-full bg-primary w-dvw p-2 ${isRemovingGithub && "slump-animation"}`}
-          ref={githubButtonRef}
-          onClick={() => open("https://github.com/Precontation")}
-        >
-          View my GitHub
-        </button>
+        {removedGithub ? (
+          <button
+            onAnimationEnd={() => {
+              setRemovedGithub(true);
+              setCurrentDialogue(dialogueArray[1]); // Call this here just for next dialogue
+            }}
+            className="rounded-full bg-primary w-dvw p-2 slump-animation"
+            tabIndex={-1}
+          >
+            View my GitHub
+          </button>
+        ) : (
+          <button
+            onAnimationEnd={() => {
+              setRemovedGithub(true);
+              setCurrentDialogue(dialogueArray[1]); // Call this here just for next dialogue
+            }}
+            className="rounded-full bg-primary w-dvw p-2"
+            ref={githubButtonRef}
+            onClick={() => open("https://github.com/Precontation")}
+          >
+            View my GitHub
+          </button>
+        )}
+
         <button
           className="rounded-full bg-primary w-dvw p-2"
           onClick={removeMyGithubYeaaaaaaa}

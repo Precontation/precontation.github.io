@@ -21,9 +21,11 @@ export default function ActualAbout() {
         </li>
       </ul>
       <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden"></h2>
-      <Link href={"/about"}>
-        <button className="rounded-full bg-primary p-2">Back</button>
-      </Link>
+      <nav>
+        <Link draggable={false} tabIndex={-1} href={"/about"}>
+          <button className="rounded-full bg-primary p-2">Back</button>
+        </Link>
+      </nav>
     </div>
   );
 }

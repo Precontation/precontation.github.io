@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import GamesButton from "@/components/GamesButton";
 import { useSearchParams } from "next/navigation";
 
 export default function GamesClient() {
@@ -19,33 +19,19 @@ export default function GamesClient() {
         <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
           Some (very unfinished) games by yours truly!
         </h2>
-        <div className=" grid grid-cols-3 gap-10">
-          <Link href="/games?g=br2">
-            <button className="rounded-2xl bg-primary w-50 h-50">
-              Banana run 2
-            </button>
-          </Link>
-          <Link href="/games?g=br3">
-            <button className="rounded-2xl bg-primary w-50 h-50">
-              Banana run 3
-            </button>
-          </Link>
-          <Link href="/games?g=cfp">
-            <button className="rounded-2xl bg-primary w-50 h-50">
-              Click For Points (web edition)
-            </button>
-          </Link>
-          <Link href="/games?g=clicks_and_points">
-            <button className="rounded-2xl bg-primary w-50 h-50">
-              Clicks & Points (VERY VERY EARLY DEVELOPEMENT)
-            </button>
-          </Link>
-          <Link href="/games?g=plat">
-            <button className="rounded-2xl bg-primary w-50 h-50">
-              Unnamed platformer game
-            </button>
-          </Link>
-        </div>
+        <nav className=" grid grid-cols-3 gap-10">
+          <GamesButton to="br2" name="Banana Run 2"></GamesButton>
+          <GamesButton to="br3" name="Banana Run 3"></GamesButton>
+          <GamesButton
+            to="cfp"
+            name="Click For Points (web edition)"
+          ></GamesButton>
+          <GamesButton
+            to="clicks_and_points"
+            name="Clicks & Points (VERY VERY EARLY DEVELOPEMENT)"
+          ></GamesButton>
+          <GamesButton to="plat" name="Unnamed platformer game"></GamesButton>
+        </nav>
       </div>
     );
   }
