@@ -11,7 +11,7 @@ export default function GamesButton({
 }) {
   return (
     <Link draggable={false} tabIndex={-1} href={`/games?g=${to}`}>
-      <button className="rounded-2xl bg-primary w-50 h-50">{name}</button>
+      <button className="rounded-2xl bg-primary w-50 h-50 p-5">{name}</button>
     </Link>
   );
 }
