@@ -38,15 +38,24 @@ body {
 
 button {
   cursor: pointer;
-  transition: transform 0.3s;
+  border: 1px solid transparent;
+  z-index: 0;
+
+  transition:
+    transform 0.3s,
+    border 0.3s;
 }
 
 button:hover {
+  z-index: 2;
   transform: scale(125%);
+  border: 1px solid var(--secondary);
 }
 
 button:active {
+  z-index: 1;
   transform: scale(110%);
+  border: 1px solid var(--secondary);
 }
 
 .slump-animation {
