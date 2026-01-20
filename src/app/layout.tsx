@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" ref={rootRef}>
       <body className="antialiased flex flex-col min-h-screen">
-        <header className="backdrop-blur-3xl border-b absolute min-w-full">
+        <header className="backdrop-blur-3xl border-b sticky top-0 min-w-full z-100">
           <nav className="flex gap-10 h-10 justify-center">
             <SwitcherLink to="" name="Home"></SwitcherLink>
             <SwitcherLink to="games" name="Games"></SwitcherLink>
