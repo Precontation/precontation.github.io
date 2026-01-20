@@ -12,7 +12,7 @@ const splashArray: Array<string> = [
   "yes",
   "Also try GoobApp!",
   "DO NOT TRY CHATAPP",
-  "؟",
+  "؟؟؟؟؟",
   "ERROR",
   "We've known each other, for so long.",
   "2? More like 3!",
