@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #768fe4;
-  --secondary: #f76565;
+  --secondary: transparent;
 }
 
 @theme inline {
