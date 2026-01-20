@@ -9,7 +9,6 @@ export default function Home() {
     if (removedGithub) {
       if (dialogueArray.indexOf(currentDialogue) == dialogueArray.length - 1) {
         open("https://store.steampowered.com/app/2159370/Click_For_Points/");
-        setRemovedGithub(false);
       } else {
         setCurrentDialogue(
           (prevDialogue) =>
@@ -79,7 +78,7 @@ export default function Home() {
             setRemovedGithub(true);
             setCurrentDialogue(dialogueArray[1]); // Call this here just for next dialogue
           }}
-          className={`rounded-full bg-primary p-2 ${isRemovingGithub && "github-button"}`}
+          className={`rounded-full bg-primary p-2 ${isRemovingGithub && "slump-animation"}`}
           ref={githubButtonRef}
           onClick={() => open("https://github.com/Precontation")}
         >
