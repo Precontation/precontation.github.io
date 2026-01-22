@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 export default function SetColor() {
   // Stackoverflow, you may be pretty much dead, but you aren't dead in my heart!
@@ -14,7 +14,7 @@ export default function SetColor() {
     return color;
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.style.setProperty("--secondary", getRandomColor());
   }, []);
 

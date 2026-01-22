@@ -25,6 +25,7 @@ export default function RootLayout({
         </header>
 
         <SetColor />
+
         <main className="grow content-center">{children}</main>
       </body>
     </html>
