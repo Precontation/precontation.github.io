@@ -25,6 +25,12 @@ const splashArray: Array<string> = [
   "Welcome, welcome!",
   "Woo, GoobApp!",
   "( ͡° ͜ʖ ͡°)",
+  ":goob:",
+  "Click!",
+  "The precontation situation is CRAZY",
+  "Try some of my games!",
+  "Do NOT look at my about page",
+  "Why are you looking at this?",
 ];
 
 const dialogueArray: Array<string> = [
