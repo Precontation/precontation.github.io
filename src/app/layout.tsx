@@ -1,3 +1,4 @@
+import SetColor from "@/components/SetColor";
 import SwitcherLink from "@/components/SwitcherLink";
 import { Metadata } from "next";
 import "./globals.css";
@@ -23,6 +24,7 @@ export default function RootLayout({
           </nav>
         </header>
 
+        <SetColor />
         <main className="grow content-center">{children}</main>
       </body>
     </html>
