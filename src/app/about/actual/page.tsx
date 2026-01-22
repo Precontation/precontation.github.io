@@ -1,11 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import SetColor from "@/components/SetColor";
 import Link from "next/link";
 
 export default function ActualAbout() {
   return (
     <div className="flex flex-col items-center gap-5">
+      <SetColor />
       <h1 className="text-5xl text-primary overflow-hidden">About me</h1>
       <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
         (for real this time)

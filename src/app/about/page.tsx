@@ -1,10 +1,12 @@
 "use client";
 
+import SetColor from "@/components/SetColor";
 import Link from "next/link";
 
 export default function About() {
   return (
     <div className="flex flex-col items-center gap-5">
+      <SetColor />
       <h1 className="text-5xl text-primary overflow-hidden">About me</h1>
       <h2 className="justify-center text-3xl w-fit text-secondary overflow-hidden">
         i am probably a human person

@@ -1,6 +1,7 @@
 "use client";
 
 import GamesButton from "@/components/GamesButton";
+import SetColor from "@/components/SetColor";
 import { useSearchParams } from "next/navigation";
 
 export default function GamesClient() {
@@ -13,6 +14,7 @@ export default function GamesClient() {
   } else {
     return (
       <div className="flex flex-col items-center gap-5">
+        <SetColor />
         <h1 className="justify-center text-7xl w-fit text-primary overflow-hidden">
           Games
         </h1>

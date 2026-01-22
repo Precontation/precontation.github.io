@@ -1,5 +1,6 @@
 "use client";
 
+import SetColor from "@/components/SetColor";
 import { useEffect, useRef, useState } from "react";
 
 const splashArray: Array<string> = [
@@ -106,6 +107,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center gap-5">
+      <SetColor />
       <h1 className="justify-center text-7xl w-fit text-primary overflow-hidden font-fancy">
         Precontation
       </h1>

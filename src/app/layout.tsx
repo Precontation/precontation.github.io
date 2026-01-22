@@ -1,4 +1,3 @@
-import SetColor from "@/components/SetColor";
 import SwitcherLink from "@/components/SwitcherLink";
 import { Metadata } from "next";
 import "./globals.css";
@@ -16,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased flex flex-col min-h-screen">
-        <SetColor />
         <header className="backdrop-blur-3xl border-b sticky top-0 min-w-full z-100">
           <nav className="flex gap-10 h-10 justify-center">
             <SwitcherLink to="" name="Home"></SwitcherLink>
