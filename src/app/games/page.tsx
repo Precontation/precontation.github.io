@@ -3,7 +3,7 @@ import GamesClient from "./client";
 
 export default function Games() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<p className="text-center">Loading...</p>}>
       <GamesClient />
     </Suspense>
   );

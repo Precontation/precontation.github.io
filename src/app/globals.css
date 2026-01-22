@@ -2,6 +2,7 @@
 
 :root {
   --background: #ffffff;
+  --background-2: #b19bba;
   --foreground: #171717;
   --primary: #768fe4;
   --secondary: transparent;
@@ -9,6 +10,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background2: var(--background-2);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
@@ -23,17 +25,37 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    --background-2: #3e3641;
     --foreground: #ededed;
     --primary: #402bca;
   }
 }
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 45deg;
+  inherits: false;
+}
+
 body {
-  background: var(--background);
+  min-height: 100vh;
+  margin: 0;
+
+  background: linear-gradient(var(--gradient-angle), var(--background), var(--background-2));
+  transform: rotateZ(0deg);
+  animation: rotateInCircle 10s linear infinite;
+  background-attachment: fixed;
+
+
   color: var(--foreground);
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+}
+
+@keyframes rotateInCircle {
+  from { --gradient-angle: 0deg; }
+  to { --gradient-angle: 360deg; }
 }
 
 button {
