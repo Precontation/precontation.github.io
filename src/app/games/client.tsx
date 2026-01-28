@@ -8,7 +8,10 @@ export default function GamesClient() {
   const game = params.get("g");
   if (game) {
     return (
-      <iframe className={"h-dvh w-dvw"} src={`/${game}/index.html`}></iframe>
+      <iframe
+        className={"h-dvh w-dvw"}
+        src={`https://precontation.github.io/${game}/`}
+      ></iframe>
     );
   } else {
     return (
