@@ -10,7 +10,7 @@ export default function GamesClient() {
     return (
       <iframe
         className={"h-dvh w-dvw"}
-        src={`https://precontation.github.io/${game}/`}
+        src={`https://${game}.precontation.me`}
       ></iframe>
     );
   } else {
