@@ -27,7 +27,7 @@ export default function GamesClient() {
             name="Click For Points (web edition)"
           ></GamesButton>
           <GamesButton
-            to="clicks_and_points"
+            to="clicksandpoints"
             name="Clicks & Points (VERY VERY EARLY DEVELOPEMENT)"
           ></GamesButton>
           <GamesButton to="plat" name="Unnamed platformer game"></GamesButton>
