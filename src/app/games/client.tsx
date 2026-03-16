@@ -8,10 +8,7 @@ export default function GamesClient() {
   const game = params.get("g");
   if (game) {
     return (
-      <iframe
-        className={"h-dvh w-dvw"}
-        src={`https://precontation.github.io/${game}/`}
-      ></iframe>
+      <iframe className={"h-dvh w-dvw"} src={`/${game}/index.html`}></iframe>
     );
   } else {
     return (
@@ -30,7 +27,7 @@ export default function GamesClient() {
             name="Click For Points (web edition)"
           ></GamesButton>
           <GamesButton
-            to="clicks-and-points"
+            to="clicks_and_points"
             name="Clicks & Points (VERY VERY EARLY DEVELOPEMENT)"
           ></GamesButton>
           <GamesButton to="plat" name="Unnamed platformer game"></GamesButton>
